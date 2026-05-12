@@ -1,0 +1,27 @@
+{
+  "name": "Simulador HGW",
+  "short_name": "HGW",
+  "description": "Simulador de Productos HGW — Lista de Precios México",
+  "start_url": "/simulador-hgw/",
+  "scope": "/simulador-hgw/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#1D9E75",
+  "icons": [
+    {
+      "src": "/simulador-hgw/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/simulador-hgw/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "es-MX"
+}

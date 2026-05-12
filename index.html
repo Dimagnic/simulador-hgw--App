@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Vite + React" />
+
+    <!-- PWA Meta -->
+    <meta name="theme-color" content="#1D9E75" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="HGW Simulador" />
+    <meta name="description" content="Simulador de Productos HGW — Lista de Precios México" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/simulador-hgw/icon.svg" />
+    <link rel="apple-touch-icon" href="/simulador-hgw/icon-192.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/simulador-hgw/manifest.json" />
+
+    <title>Simulador HGW</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/simulador-hgw/sw.js')
+            .then(reg => console.log('[SW] Registered:', reg.scope))
+            .catch(err => console.warn('[SW] Registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
